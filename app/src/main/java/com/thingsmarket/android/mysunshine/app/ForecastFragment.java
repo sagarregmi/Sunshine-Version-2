@@ -80,6 +80,7 @@ public class ForecastFragment extends Fragment {
                 "Sat 6/28 - TRAPPED IN WEATHERSTATION - 23/18",
                 "Sun 6/29 - Sunny - 20/7"
         };
+
         List<String> weekForecast = new ArrayList<String>(Arrays.asList(forecastArray));
         mForecastAdapter = new ArrayAdapter<String>(
                 getActivity(),
@@ -88,6 +89,7 @@ public class ForecastFragment extends Fragment {
                 weekForecast);
         ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
         listView.setAdapter(mForecastAdapter);
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
